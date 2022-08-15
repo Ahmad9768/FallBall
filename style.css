@@ -1,0 +1,221 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, #06aec49c, #07318dbb);
+}
+
+@font-face {
+    font-family: AmdBmk;
+    src: url(/Fonts/static/DynaPuff/DynaPuff-Regular.ttf);
+}
+
+@font-face {
+    font-family: Lobster;
+    src: url(Fonts/Lobster/LobsterTwo-Regular.ttf);
+}
+
+* {
+    font-family: Lobster;
+}
+
+#Main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#CrazyBall {
+    animation-name: SoccerBalldiv;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    display: inline-block;
+}
+
+#PadBall {
+    width: 40px;
+    height: 6px;
+    background-color: #032e7e;
+    border-radius: 10px;
+    box-shadow: 0px 3px 8px #0000ff8e;
+    z-index: 91;
+}
+
+#CrazyBall {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 29px 10px 8px 10px;
+    overflow: hidden;
+}
+
+#SoccerBall {
+    /* box-shadow: 0px 10px 5px #1e183b69; */
+    height: 30px;
+    border-radius: 40%;
+    display: inline-block;
+}
+
+#Main img {
+    width: 30px;
+    animation-name: TheBall;
+    /* animation-duration: 25s; */
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+    box-shadow: 0px 10px 5px #1e183b4f;
+    border-radius: 40%;
+    z-index: 90;
+}
+
+@keyframes SoccerBalldiv {
+    0% {
+        transform: translate(0, 0);
+    }
+    12.5% {
+        transform: translate(470px, 0px);
+    }
+    37.5% {
+        transform: translate(470px, 580px);
+    }
+    62.5% {
+        transform: translate(-470px, 580px);
+    }
+    87.5% {
+        transform: translate(-470px, 0);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+
+/* @keyframes TheBall {
+    0% {
+        transform: none;
+    }
+    25% {
+        transform: ;
+    }
+    12.5% {
+        transform: rotate(2turn);
+    }
+    37.5% {
+        transform: rotate(2turn);
+    }
+    62.5% {
+        transform: rotate(-2turn);
+    }
+    87.5% {
+        transform: rotate(-2turn);
+    }
+    100% {
+        transform: rotate(0turn);
+    }
+} */
+
+@keyframes TheBall {
+    0% {
+        transform: translate(0px, 0px) scale(1.5, 1);
+    }
+    50% {
+        transform: translate(0px, -20px)scale(1, 1.5);
+    }
+    100% {
+        transform: scale(1.5, 1) translate(0px, 0px);
+    }
+}
+
+#Main h1 {
+    color: #330242;
+    margin: 8px 0;
+}
+
+#Main h4 {
+    color: #4a085e;
+    margin: 15px 0;
+}
+
+#Topic {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#Topic>span::after {
+    content: "Ahmad Reza";
+    text-decoration: none;
+    color: #52117a;
+    font-family: AmdBmk;
+    padding: 5px 10px;
+    border-radius: 6px;
+    background: linear-gradient(180deg, #06aec4e7, #07318d3a);
+}
+
+
+/*   Main - Box   */
+
+#Main>#Box {
+    width: 850px;
+    height: 369px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #ffffff98, #c4d3f3bb);
+    box-shadow: 0px 0px 10px rgb(22, 80, 116);
+    position: relative;
+}
+
+#Box>#Ball-Station {
+    width: 60px;
+    height: 10px;
+    background-color: #4a085e;
+    border-radius: 5px;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+}
+
+#MainBall {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(90deg, #06aec4c7, #07318ddc 70%);
+    box-shadow: 0 0 10px #032e7e8f;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 4%;
+    left: 6.4%;
+}
+
+#Ground {
+    display: inline-block;
+    height: 5px;
+    width: 100%;
+    background-color: #330242;
+    position: absolute;
+    bottom: 3%;
+    box-shadow: 0px 5px 10PX #420e63af;
+}
+
+#MainBall {
+    animation-name: Gravity;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+
+/*   Part - Animation   */
+
+@keyframes Gravity {
+    0% {
+        transform: none;
+    }
+    10% {
+        transform: translate(35px, 0) rotate(.5turn);
+    }
+    20% {
+        transform: translate(100px, 299px)rotate(1turn);
+    }
+    30% {
+        animation-delay: 2s;
+    }
+}

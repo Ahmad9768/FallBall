@@ -1,0 +1,31 @@
+@keyframes SoccerBalldiv {
+    0% {
+        transform: translate(0, 0);
+    }
+    12.5% {
+        transform: translate(314px, 0px);
+    }
+    37.5% {
+        transform: translate(314px, 570px);
+    }
+    62.5% {
+        transform: translate(-314px, 570px);
+    }
+    87.5% {
+        transform: translate(-314px, 0);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+#Main>#Box {
+    width: 574px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #ffffff98, #c4d3f3bb);
+    box-shadow: 0px 0px 10px rgb(22, 80, 116);
+}
+
+#CrazyBall {
+    padding: 29px 9px 7px 9px;
+}
